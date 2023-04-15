@@ -6,7 +6,30 @@
         xmlns:local="clr-namespace:Prog124_Lab_Deconstruct_Objects_to_Classes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+        <Canvas HorizontalAlignment="Left" Height="373" Margin="28,32,0,0" VerticalAlignment="Top" Width="309" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <RichTextBox Height="118" Width="289" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run x:Name="runRTB" Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Image Height="167" Canvas.Left="14" Canvas.Top="136" Width="284"/>
+            <TextBox x:Name="txtImgLocation" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="311" Width="143" RenderTransformOrigin="0.449,0.064" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtBox2" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="334" Width="143" RenderTransformOrigin="0.449,0.064" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="125" Margin="352,280,0,0" VerticalAlignment="Top" Width="430" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+            <Button x:Name="btnBuyNow" Content="Buy Now" Height="49" Canvas.Left="12" Canvas.Top="13" Width="179"/>
+            <Button x:Name="btnReturn" Content="Return" Canvas.Left="215" Canvas.Top="13" Height="49" Width="189"/>
+            <Button x:Name="btnAddToCart" Content="Add to Cart" Canvas.Left="12" Canvas.Top="67" HorizontalAlignment="Left" VerticalAlignment="Top" Height="49" Width="179"/>
+            <Button/>
+            <Button x:Name="btnPromotion" Content="Promotion" Canvas.Left="215" Canvas.Top="67" Height="48" Width="189"/>
+        </Canvas>
+        <ListBox x:Name="LbDisplay" d:ItemsSource="{d:SampleData ItemCount=5}" Height="NaN" Margin="352,32,18,159" Width="NaN"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="28,1,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="352,1,0,0" VerticalAlignment="Top" Width="102"/>
+        <Button x:Name="btnSelectImage" Content="Custom Picture" HorizontalAlignment="Left" Margin="191,342,0,0" VerticalAlignment="Top" Height="42" Width="137" Click="btnSelectImage_Click"/>
 
     </Grid>
 </Window>
